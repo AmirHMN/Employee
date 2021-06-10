@@ -45,3 +45,12 @@ ostream &operator<<(ostream &cout, const Person &person) {
 istream &operator>>(istream &cin, Person &person) {
     cin >> person.name >> person.id >> person.address;
 }
+
+//assignment operator
+Person &Person::operator=(const Person &person) {
+    this->name = person.name;
+    this->id = person.id;
+    this->address = person.address;
+}
+
+

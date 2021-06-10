@@ -35,6 +35,8 @@ public:
 
     friend istream &operator>>(istream &, Person &);
 
+    //assignment operator
+    Person &operator=(const Person &);
 };
 
 

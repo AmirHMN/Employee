@@ -16,6 +16,21 @@ public:
 
     //copy constructor
     Person(const Person &person);
+
+    //setters and getters
+    const string &getName() const;
+
+    void setName(const string &name);
+
+    const string &getId() const;
+
+    void setId(const string &id);
+
+    const Address &getAddress() const;
+
+    void setAddress(const Address &address);
+
+
 };
 
 

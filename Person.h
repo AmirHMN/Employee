@@ -10,8 +10,12 @@ private:
     string id;
     Address address;
 public:
+    //constructors
     Person();
     Person(const string &name, const string &id, const Address &address);
+
+    //copy constructor
+    Person(const Person &person);
 };
 
 

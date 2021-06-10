@@ -36,3 +36,12 @@ const Address &Person::getAddress() const {
 void Person::setAddress(const Address &address) {
     this->address = address;
 }
+
+//iostream operators
+ostream &operator<<(ostream &cout, const Person &person) {
+    cout << "Name: " << person.name << " id: " << person.id << endl << "address: " << person.address;
+}
+
+istream &operator>>(istream &cin, Person &person) {
+    cin >> person.name >> person.id >> person.address;
+}

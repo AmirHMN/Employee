@@ -30,6 +30,10 @@ public:
 
     void setAddress(const Address &address);
 
+    //iostream operators
+    friend ostream &operator<<(ostream &, const Person &);
+
+    friend istream &operator>>(istream &, Person &);
 
 };
 

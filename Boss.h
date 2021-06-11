@@ -1,3 +1,4 @@
+#include <ostream>
 #include "Employee.h"
 #ifndef ADDRESS_BOSS_H
 #define ADDRESS_BOSS_H
@@ -22,6 +23,10 @@ public:
 
     //assignment operator
     Boss& operator=(const Boss &);
+
+    //iostream operators
+    friend ostream &operator<<(ostream &os, const Boss &boss);
+    friend istream &operator>>(istream &is, Boss &boss);
 };
 
 

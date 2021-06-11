@@ -24,3 +24,11 @@ Boss &Boss::operator=(const Boss &boss) {
     Employee::operator=(boss);
     numberOfEmployees = boss.numberOfEmployees;
 }
+
+ostream &operator<<(ostream &os, const Boss &boss) {
+    os << static_cast<const Employee &>(boss) << " - numbers of employees : " << boss.numberOfEmployees;
+}
+
+istream &operator>>(istream &is, Boss &boss) {
+    is >> static_cast<Employee &>(boss) >> boss.numberOfEmployees;
+}

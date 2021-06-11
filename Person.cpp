@@ -48,7 +48,7 @@ void Person::setAddress(const Address &address) {
 
 //iostream operators
 ostream &operator<<(ostream &cout, const Person &person) {
-    cout << "Name: " << person.name << " id: " << person.id << endl << "address: " << person.address;
+    cout << "Name: " << person.name << " - id: " << person.id << " - address: " << person.address;
 }
 
 istream &operator>>(istream &cin, Person &person) {

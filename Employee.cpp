@@ -14,3 +14,37 @@ Employee::Employee(const Employee &employee) : Person(employee) {
     this->workDone = employee.workDone;
     this->workToDo = employee.workToDo;
 }
+
+
+// setters and getters
+int Employee::getHourWork() const {
+    return hourWork;
+}
+
+void Employee::setHourWork(int hourWork) {
+    this->hourWork = hourWork;
+}
+
+int Employee::getSalaryPerHour() const {
+    return salaryPerHour;
+}
+
+void Employee::setSalaryPerHour(int salaryPerHour) {
+    this->salaryPerHour = salaryPerHour;
+}
+
+int Employee::getWorkToDo() const {
+    return workToDo;
+}
+
+void Employee::setWorkToDo(int workToDo) {
+    this->workToDo = workToDo;
+}
+
+int Employee::getWorkDone() const {
+    return workDone;
+}
+
+void Employee::setWorkDone(int workDone) {
+    this->workDone = workDone;
+}

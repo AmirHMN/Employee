@@ -17,6 +17,24 @@ public:
 
     //copy constructor
     Employee(const Employee & employee);
+
+
+    // setters and getters
+    int getHourWork() const;
+
+    void setHourWork(int hourWork);
+
+    int getSalaryPerHour() const;
+
+    void setSalaryPerHour(int salaryPerHour);
+
+    int getWorkToDo() const;
+
+    void setWorkToDo(int workToDo);
+
+    int getWorkDone() const;
+
+    void setWorkDone(int workDone);
 };
 
 

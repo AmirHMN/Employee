@@ -48,3 +48,17 @@ int Employee::getWorkDone() const {
 void Employee::setWorkDone(int workDone) {
     this->workDone = workDone;
 }
+
+//iostream operators
+ostream &operator<<(ostream &os, const Employee &employee) {
+    os << static_cast<const Person &>(employee) << endl
+       << "hour work : " << employee.hourWork << "salary per hour : " << employee.salaryPerHour << "work to do : "
+       << employee.workToDo << "work done : " << employee.workDone;
+}
+
+istream &operator>>(istream &is, Employee &employee) {
+    is >> static_cast<Person &>(employee) >> employee.hourWork >> employee.salaryPerHour >> employee.workToDo
+       >> employee.workDone;
+}
+
+

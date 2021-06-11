@@ -1,3 +1,4 @@
+#include <ostream>
 #include "Person.h"
 
 #ifndef ADDRESS_EMPLOYEE_H
@@ -16,7 +17,7 @@ public:
              int workToDo, int workDone);
 
     //copy constructor
-    Employee(const Employee & employee);
+    Employee(const Employee &employee);
 
 
     // setters and getters
@@ -35,6 +36,12 @@ public:
     int getWorkDone() const;
 
     void setWorkDone(int workDone);
+
+    //iostream operators
+    friend ostream &operator<<(ostream &os, const Employee &employee);
+
+    friend istream &operator>>(istream &is, Employee &employee);
+
 };
 
 

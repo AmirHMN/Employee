@@ -37,6 +37,8 @@ public:
 
     //assignment operator
     Person &operator=(const Person &);
+
+    bool validate();
 };
 
 

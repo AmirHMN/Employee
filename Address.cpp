@@ -13,7 +13,7 @@ istream &operator>>(istream &cin, Address &address) {
 }
 
 void Address::setCountry(const string & country) {
-    this->country = country
+    this->country = country;
 }
 
 void Address::setCity(const string & city) {

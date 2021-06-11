@@ -3,7 +3,12 @@
 
 Person::Person() {}
 
-Person::Person(const string &name, const string &id, const Address &address) : name(name), id(id), address(address) {}
+Person::Person(const string &name, const string &id, const Address &address) : name(name), id(id), address(address) {
+    if (!validate()) {
+        cout << "invalid id";
+        exit(1);
+    }
+}
 
 //copy constructor
 Person::Person(const Person &person) {
@@ -27,6 +32,10 @@ const string &Person::getId() const {
 
 void Person::setId(const string &id) {
     this->id = id;
+    if (!validate()) {
+        cout << "invalid id";
+        exit(1);
+    }
 }
 
 const Address &Person::getAddress() const {
@@ -53,4 +62,30 @@ Person &Person::operator=(const Person &person) {
     this->address = person.address;
 }
 
+bool Person::validate() {
+    //checks if the ID has 8 to 10 digits
+    if (id.length() < 8 || id.length() > 10)return false;
+    //checks that first 2 digits be between 84-99
+    if (id.substr(0, 2) < "84" || id.substr(0, 2) > "99") return false;
+    //check for non-numerical character -> 8 digits : 1 char / 9 digits : 2 char / 10 digits : 3 char (placed after first 2 digits)
+    switch (id.length()) {
+        case 8:
+            if (id[2] >= '0' && id[2] <= '9')return false;
+            break;
+        case 9:
+            if ((id[2] >= '0' && id[2] <= '9') || (id[3] >= '0' && id[3] <= '9'))
+                return false;
+            break;
+        case 10:
+            if ((id[2] >= '0' && id[2] <= '9') || (id[3] >= '0' && id[3] <= '9') || (id[4] >= '0' && id[4] <= '9'))
+                return false;
+            break;
+    }
+    //check for 5 last digits be smaller than 4 or bigger than 6
+    for (int i = id.length() - 5; i < id.length(); ++i) {
+        if ((id[i] >= '4' && id[i] <= '6') || (id[i] < '0' || id[i] > '9'))
+            return false;
+    }
+    return true;
+}
 

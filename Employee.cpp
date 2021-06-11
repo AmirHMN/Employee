@@ -4,7 +4,13 @@
 Employee::Employee(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour,
                    int workToDo, int workDone)
         : Person(name, id, address), hourWork(hourWork), salaryPerHour(salaryPerHour), workToDo(workToDo),
-          workDone(workDone) {}
+          workDone(workDone) {
+    if (!validate()) {
+        cout << "invalid id";
+        exit(1);
+
+    }
+}
 
 
 //copy constructor
@@ -69,6 +75,18 @@ Employee &Employee::operator=(const Employee &employee) {
     this->salaryPerHour = employee.salaryPerHour;
     this->workToDo = employee.workToDo;
     this->workDone = employee.workDone;
+}
+
+bool Employee::validate() {
+    if (id[2] != '*')return false;
+    return Person::validate();
+}
+
+double Employee::calculateSalary() const {
+    double salary;
+    salary = salaryPerHour * hourWork;
+    salary -= salary * (double)(workToDo-workDone)/100;
+    return salary;
 }
 
 

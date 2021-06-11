@@ -45,6 +45,11 @@ public:
     //assignment operator
     Employee& operator=(const Employee&);
 
+    //override validate
+    bool validate();
+
+
+    double calculateSalary() const;
 };
 
 

@@ -50,6 +50,8 @@ public:
 
 
     double calculateSalary() const;
+
+    double efficiency() const;
 };
 
 

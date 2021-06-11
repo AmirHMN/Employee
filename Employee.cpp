@@ -85,8 +85,12 @@ bool Employee::validate() {
 double Employee::calculateSalary() const {
     double salary;
     salary = salaryPerHour * hourWork;
-    salary -= salary * (double)(workToDo-workDone)/100;
+    salary -= salary * (double) (workToDo - workDone) / 100;
     return salary;
+}
+
+double Employee::efficiency() const {
+    return (double) workDone / hourWork;
 }
 
 

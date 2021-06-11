@@ -6,7 +6,7 @@
 
 
 class Employee : public Person {
-private:
+protected:
     int hourWork;
     int salaryPerHour;
     int workToDo;

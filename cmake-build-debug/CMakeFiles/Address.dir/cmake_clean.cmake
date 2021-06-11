@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "Address.exe.manifest"
   "Address.pdb"
   "CMakeFiles/Address.dir/Address.cpp.obj"
+  "CMakeFiles/Address.dir/Employee.cpp.obj"
   "CMakeFiles/Address.dir/Person.cpp.obj"
   "CMakeFiles/Address.dir/main.cpp.obj"
   "libAddress.dll.a"

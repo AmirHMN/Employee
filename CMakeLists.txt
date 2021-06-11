@@ -3,4 +3,4 @@ project(Address)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Address main.cpp Address.cpp Address.h Person.cpp Person.h)
+add_executable(Address main.cpp Address.cpp Address.h Person.cpp Person.h Employee.cpp Employee.h)

@@ -1,6 +1,9 @@
 #include "Employee.h"
 
 //constructor
+Employee::Employee() {
+
+}
 Employee::Employee(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour,
                    int workToDo, int workDone)
         : Person(name, id, address), hourWork(hourWork), salaryPerHour(salaryPerHour), workToDo(workToDo),
@@ -92,5 +95,7 @@ double Employee::calculateSalary() const {
 double Employee::efficiency() const {
     return (double) workDone / hourWork;
 }
+
+
 
 

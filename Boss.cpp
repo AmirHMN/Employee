@@ -1,6 +1,9 @@
 #include "Boss.h"
 
 //constructor
+Boss::Boss() {
+
+}
 Boss::Boss(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour, int workToDo,
            int workDone, int numberOfEmployees) : Employee(name, id, address, hourWork, salaryPerHour, workToDo,
                                                            workDone), numberOfEmployees(numberOfEmployees) {}
@@ -25,6 +28,7 @@ Boss &Boss::operator=(const Boss &boss) {
     numberOfEmployees = boss.numberOfEmployees;
 }
 
+//iostream operators
 ostream &operator<<(ostream &os, const Boss &boss) {
     os << static_cast<const Employee &>(boss) << " - numbers of employees : " << boss.numberOfEmployees;
 }
@@ -32,3 +36,10 @@ ostream &operator<<(ostream &os, const Boss &boss) {
 istream &operator>>(istream &is, Boss &boss) {
     is >> static_cast<Employee &>(boss) >> boss.numberOfEmployees;
 }
+
+double Boss::calculateSalary() const {
+    double salary =  Employee::calculateSalary();
+    salary*= 1.15;
+    return salary;
+}
+

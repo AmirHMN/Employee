@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/AmirHMN/CLionProjects/Employee/Address.cpp" "C:/Users/AmirHMN/CLionProjects/Employee/cmake-build-debug/CMakeFiles/Address.dir/Address.cpp.obj"
   "C:/Users/AmirHMN/CLionProjects/Employee/Boss.cpp" "C:/Users/AmirHMN/CLionProjects/Employee/cmake-build-debug/CMakeFiles/Address.dir/Boss.cpp.obj"
+  "C:/Users/AmirHMN/CLionProjects/Employee/Company.cpp" "C:/Users/AmirHMN/CLionProjects/Employee/cmake-build-debug/CMakeFiles/Address.dir/Company.cpp.obj"
   "C:/Users/AmirHMN/CLionProjects/Employee/Employee.cpp" "C:/Users/AmirHMN/CLionProjects/Employee/cmake-build-debug/CMakeFiles/Address.dir/Employee.cpp.obj"
   "C:/Users/AmirHMN/CLionProjects/Employee/Person.cpp" "C:/Users/AmirHMN/CLionProjects/Employee/cmake-build-debug/CMakeFiles/Address.dir/Person.cpp.obj"
   "C:/Users/AmirHMN/CLionProjects/Employee/main.cpp" "C:/Users/AmirHMN/CLionProjects/Employee/cmake-build-debug/CMakeFiles/Address.dir/main.cpp.obj"

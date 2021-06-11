@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "Address.pdb"
   "CMakeFiles/Address.dir/Address.cpp.obj"
   "CMakeFiles/Address.dir/Boss.cpp.obj"
+  "CMakeFiles/Address.dir/Company.cpp.obj"
   "CMakeFiles/Address.dir/Employee.cpp.obj"
   "CMakeFiles/Address.dir/Person.cpp.obj"
   "CMakeFiles/Address.dir/main.cpp.obj"

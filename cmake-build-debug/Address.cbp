@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/AmirHMN/CLionProjects/Employee/Boss.h">
 			<Option target="Address"/>
 		</Unit>
+		<Unit filename="C:/Users/AmirHMN/CLionProjects/Employee/Company.cpp">
+			<Option target="Address"/>
+		</Unit>
+		<Unit filename="C:/Users/AmirHMN/CLionProjects/Employee/Company.h">
+			<Option target="Address"/>
+		</Unit>
 		<Unit filename="C:/Users/AmirHMN/CLionProjects/Employee/Employee.cpp">
 			<Option target="Address"/>
 		</Unit>

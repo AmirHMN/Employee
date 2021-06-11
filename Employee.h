@@ -13,6 +13,7 @@ protected:
     int workDone;
 public:
     // constructor
+    Employee();
     Employee(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour,
              int workToDo, int workDone);
 
@@ -46,10 +47,10 @@ public:
     Employee& operator=(const Employee&);
 
     //override validate
-    bool validate();
+    virtual bool validate();
 
 
-    double calculateSalary() const;
+    virtual double calculateSalary() const;
 
     double efficiency() const;
 };

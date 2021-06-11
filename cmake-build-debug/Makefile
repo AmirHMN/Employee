@@ -196,6 +196,33 @@ Boss.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Address.dir\build.make CMakeFiles/Address.dir/Boss.cpp.s
 .PHONY : Boss.cpp.s
 
+Company.obj: Company.cpp.obj
+
+.PHONY : Company.obj
+
+# target to build an object file
+Company.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Address.dir\build.make CMakeFiles/Address.dir/Company.cpp.obj
+.PHONY : Company.cpp.obj
+
+Company.i: Company.cpp.i
+
+.PHONY : Company.i
+
+# target to preprocess a source file
+Company.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Address.dir\build.make CMakeFiles/Address.dir/Company.cpp.i
+.PHONY : Company.cpp.i
+
+Company.s: Company.cpp.s
+
+.PHONY : Company.s
+
+# target to generate assembly for a file
+Company.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Address.dir\build.make CMakeFiles/Address.dir/Company.cpp.s
+.PHONY : Company.cpp.s
+
 Employee.obj: Employee.cpp.obj
 
 .PHONY : Employee.obj
@@ -292,6 +319,9 @@ help:
 	@echo ... Boss.obj
 	@echo ... Boss.i
 	@echo ... Boss.s
+	@echo ... Company.obj
+	@echo ... Company.i
+	@echo ... Company.s
 	@echo ... Employee.obj
 	@echo ... Employee.i
 	@echo ... Employee.s

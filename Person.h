@@ -38,7 +38,7 @@ public:
     //assignment operator
     Person &operator=(const Person &);
 
-    bool validate();
+    virtual bool validate();
 };
 
 

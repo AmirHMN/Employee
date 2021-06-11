@@ -10,6 +10,7 @@ private:
 public:
 
     //constructor
+    Boss();
     Boss(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour, int workToDo,
          int workDone , int numberOfEmployees);
 
@@ -27,6 +28,8 @@ public:
     //iostream operators
     friend ostream &operator<<(ostream &os, const Boss &boss);
     friend istream &operator>>(istream &is, Boss &boss);
+
+    double calculateSalary() const;
 };
 
 

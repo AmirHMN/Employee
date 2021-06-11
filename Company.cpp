@@ -36,13 +36,21 @@ Company::~Company() {
 }
 
 Employee Company::maxEfficiency() {
-Employee* max;
-max = employee[0];
+    Employee *max;
+    max = employee[0];
     for (int i = 1; i < boss->getNumberOfEmployees(); ++i) {
         if (employee[i]->efficiency() > max->efficiency())
             max = employee[i];
     }
     return *max;
+}
+
+double Company::averageEfficiency() {
+    double avr = 0;
+    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+        avr += employee[i]->efficiency();
+    }
+    return avr;
 }
 
 

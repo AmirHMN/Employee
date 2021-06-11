@@ -19,6 +19,8 @@ public:
     ~Company();
 
     Employee maxEfficiency();
+
+    double averageEfficiency();
 };
 
 

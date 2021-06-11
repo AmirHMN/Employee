@@ -4,6 +4,12 @@
 CMakeFiles/Address.dir/Address.cpp.obj
  C:/Users/AmirHMN/CLionProjects/Employee/Address.cpp
  C:/Users/AmirHMN/CLionProjects/Employee/Address.h
+CMakeFiles/Address.dir/Boss.cpp.obj
+ C:/Users/AmirHMN/CLionProjects/Employee/Address.h
+ C:/Users/AmirHMN/CLionProjects/Employee/Boss.cpp
+ C:/Users/AmirHMN/CLionProjects/Employee/Boss.h
+ C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
+ C:/Users/AmirHMN/CLionProjects/Employee/Person.h
 CMakeFiles/Address.dir/Employee.cpp.obj
  C:/Users/AmirHMN/CLionProjects/Employee/Address.h
  C:/Users/AmirHMN/CLionProjects/Employee/Employee.cpp

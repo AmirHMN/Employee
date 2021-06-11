@@ -4,6 +4,12 @@
 CMakeFiles/Address.dir/Address.cpp.obj: ../Address.cpp
 CMakeFiles/Address.dir/Address.cpp.obj: ../Address.h
 
+CMakeFiles/Address.dir/Boss.cpp.obj: ../Address.h
+CMakeFiles/Address.dir/Boss.cpp.obj: ../Boss.cpp
+CMakeFiles/Address.dir/Boss.cpp.obj: ../Boss.h
+CMakeFiles/Address.dir/Boss.cpp.obj: ../Employee.h
+CMakeFiles/Address.dir/Boss.cpp.obj: ../Person.h
+
 CMakeFiles/Address.dir/Employee.cpp.obj: ../Address.h
 CMakeFiles/Address.dir/Employee.cpp.obj: ../Employee.cpp
 CMakeFiles/Address.dir/Employee.cpp.obj: ../Employee.h

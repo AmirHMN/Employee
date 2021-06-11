@@ -19,6 +19,9 @@ public:
     int getNumberOfEmployees() const;
 
     void setNumberOfEmployees(int numberOfEmployees);
+
+    //assignment operator
+    Boss& operator=(const Boss &);
 };
 
 

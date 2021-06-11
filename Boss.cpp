@@ -10,6 +10,7 @@ Boss::Boss(const Boss &boss) : Employee(boss) {
     numberOfEmployees = boss.numberOfEmployees;
 }
 
+//setters and getters
 int Boss::getNumberOfEmployees() const {
     return numberOfEmployees;
 }
@@ -18,4 +19,8 @@ void Boss::setNumberOfEmployees(int numberOfEmployees) {
     Boss::numberOfEmployees = numberOfEmployees;
 }
 
-//setters and getters
+//assignment operator
+Boss &Boss::operator=(const Boss &boss) {
+    Employee::operator=(boss);
+    numberOfEmployees = boss.numberOfEmployees;
+}

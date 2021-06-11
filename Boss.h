@@ -14,6 +14,11 @@ public:
 
     //copy constructor
     Boss(const Boss &boss);
+
+    //setters and getters
+    int getNumberOfEmployees() const;
+
+    void setNumberOfEmployees(int numberOfEmployees);
 };
 
 

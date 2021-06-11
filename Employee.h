@@ -42,6 +42,9 @@ public:
 
     friend istream &operator>>(istream &is, Employee &employee);
 
+    //assignment operator
+    Employee& operator=(const Employee&);
+
 };
 
 

@@ -62,3 +62,13 @@ istream &operator>>(istream &is, Employee &employee) {
 }
 
 
+//assignment operator
+Employee &Employee::operator=(const Employee &employee) {
+    Person::operator=(employee);
+    this->hourWork = employee.hourWork;
+    this->salaryPerHour = employee.salaryPerHour;
+    this->workToDo = employee.workToDo;
+    this->workDone = employee.workDone;
+}
+
+

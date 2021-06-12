@@ -10,18 +10,8 @@ C:/Users/AmirHMN/CLionProjects/Employee/Address.h
 iostream
 -
 
-C:/Users/AmirHMN/CLionProjects/Employee/Employee.cpp
-Employee.h
-C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
-
 C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
 ostream
--
-Person.h
-C:/Users/AmirHMN/CLionProjects/Employee/Person.h
-
-C:/Users/AmirHMN/CLionProjects/Employee/Person.cpp
-cstring
 -
 Person.h
 C:/Users/AmirHMN/CLionProjects/Employee/Person.h
@@ -29,4 +19,10 @@ C:/Users/AmirHMN/CLionProjects/Employee/Person.h
 C:/Users/AmirHMN/CLionProjects/Employee/Person.h
 Address.h
 C:/Users/AmirHMN/CLionProjects/Employee/Address.h
+
+C:/Users/AmirHMN/CLionProjects/Employee/main.cpp
+iostream
+-
+Employee.h
+C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
 

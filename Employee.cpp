@@ -4,6 +4,7 @@
 Employee::Employee() {
 
 }
+
 Employee::Employee(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour,
                    int workToDo, int workDone)
         : Person(name, id, address), hourWork(hourWork), salaryPerHour(salaryPerHour), workToDo(workToDo),
@@ -72,7 +73,7 @@ istream &operator>>(istream &is, Employee &employee) {
 
 
 //assignment operator
-Employee &Employee::operator=(const Employee &employee) {
+Employee Employee::operator=(const Employee &employee) {
     Person::operator=(employee);
     this->hourWork = employee.hourWork;
     this->salaryPerHour = employee.salaryPerHour;
@@ -88,12 +89,12 @@ bool Employee::validate() {
 double Employee::calculateSalary() const {
     double salary;
     salary = salaryPerHour * hourWork;
-    salary -= salary * (double) (workToDo - workDone) / 100;
+    salary *= (double) workDone / workToDo;
     return salary;
 }
 
 double Employee::efficiency() const {
-    return (double) workDone / hourWork;
+    return ((double) workDone / workToDo * 100) / hourWork;
 }
 
 

@@ -10,6 +10,13 @@ CMakeFiles/Address.dir/Boss.cpp.obj: ../Boss.h
 CMakeFiles/Address.dir/Boss.cpp.obj: ../Employee.h
 CMakeFiles/Address.dir/Boss.cpp.obj: ../Person.h
 
+CMakeFiles/Address.dir/Company.cpp.obj: ../Address.h
+CMakeFiles/Address.dir/Company.cpp.obj: ../Boss.h
+CMakeFiles/Address.dir/Company.cpp.obj: ../Company.cpp
+CMakeFiles/Address.dir/Company.cpp.obj: ../Company.h
+CMakeFiles/Address.dir/Company.cpp.obj: ../Employee.h
+CMakeFiles/Address.dir/Company.cpp.obj: ../Person.h
+
 CMakeFiles/Address.dir/Employee.cpp.obj: ../Address.h
 CMakeFiles/Address.dir/Employee.cpp.obj: ../Employee.cpp
 CMakeFiles/Address.dir/Employee.cpp.obj: ../Employee.h

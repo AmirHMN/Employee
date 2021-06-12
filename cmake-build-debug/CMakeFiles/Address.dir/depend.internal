@@ -10,6 +10,13 @@ CMakeFiles/Address.dir/Boss.cpp.obj
  C:/Users/AmirHMN/CLionProjects/Employee/Boss.h
  C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
  C:/Users/AmirHMN/CLionProjects/Employee/Person.h
+CMakeFiles/Address.dir/Company.cpp.obj
+ C:/Users/AmirHMN/CLionProjects/Employee/Address.h
+ C:/Users/AmirHMN/CLionProjects/Employee/Boss.h
+ C:/Users/AmirHMN/CLionProjects/Employee/Company.cpp
+ C:/Users/AmirHMN/CLionProjects/Employee/Company.h
+ C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
+ C:/Users/AmirHMN/CLionProjects/Employee/Person.h
 CMakeFiles/Address.dir/Employee.cpp.obj
  C:/Users/AmirHMN/CLionProjects/Employee/Address.h
  C:/Users/AmirHMN/CLionProjects/Employee/Employee.cpp

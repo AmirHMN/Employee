@@ -18,9 +18,13 @@ public:
     //destructor
     ~Company();
 
-    Employee maxEfficiency();
+    Employee& maxEfficiency();
 
     double averageEfficiency();
+
+    void changeBoss();
+
+    void gift();
 };
 
 

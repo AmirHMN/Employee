@@ -38,6 +38,7 @@ Company::~Company() {
 Employee &Company::maxEfficiency() {
     Employee *max;
     max = employee[0];
+    //found employee has max efficiency
     for (int i = 1; i < boss->getNumberOfEmployees(); ++i) {
         if (employee[i]->efficiency() > max->efficiency())
             max = employee[i];
@@ -47,6 +48,7 @@ Employee &Company::maxEfficiency() {
 
 double Company::averageEfficiency() {
     double avr = 0;
+    // average of efficiency of all employees
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
         avr += employee[i]->efficiency();
     }
@@ -73,16 +75,25 @@ void Company::gift() {
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
         if (employee[i]->getId().substr(0, 2) < "90") // 5 hour gift for earlier than 90th years
             employee[i]->setHourWork(employee[i]->getHourWork() + 5);
-        if (employee[i]->efficiency() == maxEfficiency().efficiency())
+        if (employee[i]->efficiency() == maxEfficiency().efficiency())//10 hours gift for max efficiency
             employee[i]->setHourWork(employee[i]->getHourWork() + 10);
     }
 }
 
 void Company::payForService() {
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
-        if (employee[i]->getAddress().getCity() != "Tehran")
+        if (employee[i]->getAddress().getCity() != "Tehran") // 7 hours gift for who aren't in tehran
             employee[i]->setHourWork(employee[i]->getHourWork() + 7);
     }
+}
+
+bool Company::isEnoughBudget() {
+    double sumOfSalary = 0;
+    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+        sumOfSalary += employee[i]->calculateSalary();
+    }
+    if (sumOfSalary > budget)return false;
+    return true;
 }
 
 

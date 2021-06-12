@@ -18,7 +18,7 @@ Person::Person(const Person &person) {
 }
 
 //setters and getters
-const string &Person::getName() const {
+string Person::getName() const {
     return name;
 }
 
@@ -26,7 +26,7 @@ void Person::setName(const string &name) {
     this->name = name;
 }
 
-const string &Person::getId() const {
+string Person::getId() const {
     return id;
 }
 
@@ -38,7 +38,7 @@ void Person::setId(const string &id) {
     }
 }
 
-const Address &Person::getAddress() const {
+Address Person::getAddress() const {
     return address;
 }
 

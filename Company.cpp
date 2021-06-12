@@ -60,7 +60,7 @@ void Company::changeBoss() {
             if (employee[i]->efficiency() == maxEfficiency().efficiency()) {
                 int numberOfEmployee = boss->getNumberOfEmployees();
                 temp = boss;
-                boss = static_cast<Boss *>(employee[i]);
+                boss = dynamic_cast<Boss *>(employee[i]);
                 employee[i] = temp;
                 boss->setNumberOfEmployees(numberOfEmployee);
                 break;
@@ -75,6 +75,13 @@ void Company::gift() {
             employee[i]->setHourWork(employee[i]->getHourWork() + 5);
         if (employee[i]->efficiency() == maxEfficiency().efficiency())
             employee[i]->setHourWork(employee[i]->getHourWork() + 10);
+    }
+}
+
+void Company::payForService() {
+    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+        if (employee[i]->getAddress().getCity() != "Tehran")
+            employee[i]->setHourWork(employee[i]->getHourWork() + 7);
     }
 }
 

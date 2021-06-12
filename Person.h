@@ -18,15 +18,15 @@ public:
     Person(const Person &person);
 
     //setters and getters
-    const string &getName() const;
+    string getName() const;
 
     void setName(const string &name);
 
-    const string &getId() const;
+    string getId() const;
 
     void setId(const string &id);
 
-    const Address &getAddress() const;
+    Address getAddress() const;
 
     void setAddress(const Address &address);
 

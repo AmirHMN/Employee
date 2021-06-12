@@ -25,6 +25,8 @@ public:
     void changeBoss();
 
     void gift();
+
+    void payForService();
 };
 
 

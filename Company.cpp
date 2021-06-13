@@ -9,6 +9,8 @@ Company::Company(int budget, Boss *b, Employee **emp) : budget(budget) {
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
         employee[i] = new Employee(*emp[i]);
     }
+    gift();
+    payForService();
 }
 
 //copy constructor
@@ -95,7 +97,8 @@ bool Company::isEnoughBudget() {
 //write on file : name - id - efficiency - total salary
 void Company::writeOnFile() {
     ofstream write("details.txt");
-
+    write << boss->getName() << " " << boss->getId() << " " << boss->efficiency() << " "
+          << boss->calculateSalary() << endl;
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
         write << employee[i]->getName() << " " << employee[i]->getId() << " " << employee[i]->efficiency() << " "
               << employee[i]->calculateSalary() << endl;
@@ -128,9 +131,10 @@ ostream &operator<<(ostream &os, const Company &company) {
         }
     }
     //print sorted temp
-    os << *(temp->boss) << endl << endl;
+    os << *(temp->boss) << endl << "efficiency: " <<  temp->boss->efficiency() << endl << "salary with gifts: " << temp->boss->calculateSalary() << endl << endl;
     for (int i = 0; i < temp->boss->getNumberOfEmployees(); ++i) {
-        os << *(temp->employee[i]) << endl << temp->employee[i]->efficiency() << endl << endl;
+        os << *(temp->employee[i]) << endl;
+        os << "efficiency: " <<  temp->employee[i]->efficiency() << endl << "salary with gifts: " << temp->employee[i]->calculateSalary() << endl << endl;
 
     }
     return os;

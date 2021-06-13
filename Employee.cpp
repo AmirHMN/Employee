@@ -68,8 +68,16 @@ ostream &operator<<(ostream &os, const Employee &employee) {
 }
 
 istream &operator>>(istream &is, Employee &employee) {
-    is >> static_cast<Person &>(employee) >> employee.hourWork >> employee.salaryPerHour >> employee.workToDo
-       >> employee.workDone;
+    is >> static_cast<Person &>(employee);
+    std::cout << "Enter hour work:" << endl;
+    is >> employee.hourWork;
+    std::cout << "Enter salary per hour:" << endl;
+    is >> employee.salaryPerHour;
+    std::cout  << "Enter work to do:" << endl;
+    is >> employee.workToDo;
+    std::cout << "Enter work done:" << endl;
+    is >> employee.workDone;
+    return is;
 }
 
 

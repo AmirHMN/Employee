@@ -5,12 +5,17 @@ Address::Address() {}
 Address::Address(string co, string ci, string st) : country(co), city(ci), street(st) {};
 
 ostream &operator<<(ostream &cout, const Address &address) {
-    cout << "country : " << address.country << " city : " << address.city << " street : " << address.street;
+    cout << "country : " << address.country << " - city : " << address.city << " - street : " << address.street;
     return cout;
 }
 
 istream &operator>>(istream &cin, Address &address) {
-    cin >> address.country >> address.city >> address.street;
+    std::cout << "Enter country:" << endl;
+    cin >> address.country;
+    std::cout << "Enter city:" << endl;
+    cin >> address.city;
+    std::cout  << "Enter street:" << endl;
+    cin >> address.street;
     return cin;
 }
 

@@ -4,7 +4,7 @@
 #include "Boss.h"
 
 class Company {
-public:
+private:
     int budget;
     Boss *boss;
     Employee **employee;

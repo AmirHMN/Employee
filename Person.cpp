@@ -52,8 +52,13 @@ ostream &operator<<(ostream &cout, const Person &person) {
     return cout;
 }
 
-istream &operator>>(istream &cin, Person &person) {
-    cin >> person.name >> person.id >> person.address;
+istream &operator>>(istream &is, Person &person) {
+    std::cout << "Enter name:" << endl;
+    is >> person.name;
+    std::cout << "Enter id:" << endl;
+    is >> person.id;
+    std::cout  << "address:" << endl;
+    is >> person.address;
     return cin;
 }
 

@@ -34,7 +34,10 @@ ostream &operator<<(ostream &os, const Boss &boss) {
 }
 
 istream &operator>>(istream &is, Boss &boss) {
-    is >> static_cast<Employee &>(boss) >> boss.numberOfEmployees;
+    is >> static_cast<Employee &>(boss);
+    std::cout << "Enter number of employees:" << endl;
+
+    is >> boss.numberOfEmployees;
     return is;
 }
 

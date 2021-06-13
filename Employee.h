@@ -50,7 +50,7 @@ public:
     virtual bool validate();
 
 
-    virtual double calculateSalary() const;
+    double calculateSalary() const;
 
     double efficiency() const;
 };

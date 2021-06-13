@@ -6,10 +6,12 @@ Address::Address(string co, string ci, string st) : country(co), city(ci), stree
 
 ostream &operator<<(ostream &cout, const Address &address) {
     cout << "country : " << address.country << " city : " << address.city << " street : " << address.street;
+    return cout;
 }
 
 istream &operator>>(istream &cin, Address &address) {
     cin >> address.country >> address.city >> address.street;
+    return cin;
 }
 
 void Address::setCountry(const string & country) {

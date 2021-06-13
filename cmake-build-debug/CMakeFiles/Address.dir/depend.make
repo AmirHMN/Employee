@@ -27,6 +27,8 @@ CMakeFiles/Address.dir/Person.cpp.obj: ../Person.cpp
 CMakeFiles/Address.dir/Person.cpp.obj: ../Person.h
 
 CMakeFiles/Address.dir/main.cpp.obj: ../Address.h
+CMakeFiles/Address.dir/main.cpp.obj: ../Boss.h
+CMakeFiles/Address.dir/main.cpp.obj: ../Company.h
 CMakeFiles/Address.dir/main.cpp.obj: ../Employee.h
 CMakeFiles/Address.dir/main.cpp.obj: ../Person.h
 CMakeFiles/Address.dir/main.cpp.obj: ../main.cpp

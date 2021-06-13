@@ -10,7 +10,6 @@ private:
 public:
 
     //constructor
-    Boss();
     Boss(const string &name, const string &id, const Address &address, int hourWork, int salaryPerHour, int workToDo,
          int workDone , int numberOfEmployees);
 

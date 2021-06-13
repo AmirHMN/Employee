@@ -4,13 +4,13 @@
 #include "Boss.h"
 
 class Company {
-private:
+public:
     int budget;
     Boss *boss;
     Employee **employee;
 public:
     //constructor
-    Company(int budget, Boss *boss, Employee **employee);
+    Company(int budget, Boss * boss, Employee **employee);
 
     //copy constructor
     Company(const Company &company);
@@ -18,7 +18,7 @@ public:
     //destructor
     ~Company();
 
-    Employee& maxEfficiency();
+    Employee* maxEfficiency();
 
     double averageEfficiency();
 
@@ -29,6 +29,11 @@ public:
     void payForService();
 
     bool isEnoughBudget();
+
+    void writeOnFile();
+
+    friend ostream &operator<<(ostream &os, const Company &c1);
+    friend istream &operator>>(istream &is, Company &company);
 };
 
 

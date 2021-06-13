@@ -13,7 +13,7 @@ private:
 public:
     //constructors
     Address();
-    Address(string, string, string);
+    Address(string country, string city, string street);
 
 
     //iostream operators

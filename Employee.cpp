@@ -64,6 +64,7 @@ ostream &operator<<(ostream &os, const Employee &employee) {
     os << static_cast<const Person &>(employee) << endl
        << "hour work : " << employee.hourWork << " - salary per hour : " << employee.salaryPerHour << " - work to do : "
        << employee.workToDo << " - work done : " << employee.workDone;
+    return os;
 }
 
 istream &operator>>(istream &is, Employee &employee) {
@@ -79,6 +80,7 @@ Employee Employee::operator=(const Employee &employee) {
     this->salaryPerHour = employee.salaryPerHour;
     this->workToDo = employee.workToDo;
     this->workDone = employee.workDone;
+    return *this;
 }
 
 bool Employee::validate() {

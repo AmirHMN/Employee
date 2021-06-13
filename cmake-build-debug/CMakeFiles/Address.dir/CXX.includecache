@@ -10,6 +10,26 @@ C:/Users/AmirHMN/CLionProjects/Employee/Address.h
 iostream
 -
 
+C:/Users/AmirHMN/CLionProjects/Employee/Boss.h
+ostream
+-
+Employee.h
+C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
+
+C:/Users/AmirHMN/CLionProjects/Employee/Company.cpp
+fstream
+-
+iostream
+-
+Company.h
+C:/Users/AmirHMN/CLionProjects/Employee/Company.h
+algorithm
+-
+
+C:/Users/AmirHMN/CLionProjects/Employee/Company.h
+Boss.h
+C:/Users/AmirHMN/CLionProjects/Employee/Boss.h
+
 C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
 ostream
 -
@@ -19,10 +39,4 @@ C:/Users/AmirHMN/CLionProjects/Employee/Person.h
 C:/Users/AmirHMN/CLionProjects/Employee/Person.h
 Address.h
 C:/Users/AmirHMN/CLionProjects/Employee/Address.h
-
-C:/Users/AmirHMN/CLionProjects/Employee/main.cpp
-iostream
--
-Employee.h
-C:/Users/AmirHMN/CLionProjects/Employee/Employee.h
 

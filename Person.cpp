@@ -49,10 +49,12 @@ void Person::setAddress(const Address &address) {
 //iostream operators
 ostream &operator<<(ostream &cout, const Person &person) {
     cout << "Name: " << person.name << " - id: " << person.id << " - address: " << person.address;
+    return cout;
 }
 
 istream &operator>>(istream &cin, Person &person) {
     cin >> person.name >> person.id >> person.address;
+    return cin;
 }
 
 //assignment operator
@@ -60,6 +62,7 @@ Person &Person::operator=(const Person &person) {
     this->name = person.name;
     this->id = person.id;
     this->address = person.address;
+    return *this;
 }
 
 bool Person::validate() {

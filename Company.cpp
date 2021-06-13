@@ -14,7 +14,7 @@ Company::Company(int budget, Boss *b, Employee **emp) : budget(budget) {
 //copy constructor
 Company::Company(const Company &company) {
     budget = company.budget;
-    boss = company.boss;
+    boss = new Boss(*company.boss);
     employee = new Employee *[boss->getNumberOfEmployees()];
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
         employee[i] = new Employee(*company.employee[i]);
@@ -46,7 +46,7 @@ double Company::averageEfficiency() {
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
         avr += employee[i]->efficiency();
     }
-    return avr;
+    return avr/boss->getNumberOfEmployees();
 }
 
 void Company::changeBoss() {
@@ -67,10 +67,11 @@ void Company::changeBoss() {
 }
 
 void Company::gift() {
+    Employee * max = maxEfficiency();
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
         if (employee[i]->getId().substr(0, 2) < "90") // 5 hour gift for earlier than 90th years
             employee[i]->setHourWork(employee[i]->getHourWork() + 5);
-        if (employee[i]->efficiency() == maxEfficiency()->efficiency())//10 hours gift for max efficiency
+        if (employee[i]->efficiency() == max->efficiency())//10 hours gift for max efficiency
             employee[i]->setHourWork(employee[i]->getHourWork() + 10);
     }
 }
@@ -102,7 +103,37 @@ void Company::writeOnFile() {
 }
 
 ostream &operator<<(ostream &os, const Company &company) {
-   
+    auto *temp = new Company(company);
+    bool flag = true;
+    //sorting temp by name
+    while (flag) {
+
+        flag = false;
+        for (int i = 0; i < temp->boss->getNumberOfEmployees() - 1; ++i) {
+            if (temp->employee[i]->getName() > temp->employee[i + 1]->getName()) {
+                std::swap(temp->employee[i], temp->employee[i + 1]);
+                flag = true;
+            }
+        }
+    }
+    //sorting temp by id
+    flag = true;
+    while (flag) {
+        flag = false;
+        for (int i = 0; i < temp->boss->getNumberOfEmployees() - 1; ++i) {
+            if (temp->employee[i]->getId().substr(0, 2) < temp->employee[i + 1]->getId().substr(0, 2)) {
+                std::swap(temp->employee[i], temp->employee[i + 1]);
+                flag = true;
+            }
+        }
+    }
+    //print sorted temp
+    os << *(temp->boss) << endl << endl;
+    for (int i = 0; i < temp->boss->getNumberOfEmployees(); ++i) {
+        os << *(temp->employee[i]) << endl << temp->employee[i]->efficiency() << endl << endl;
+
+    }
+    return os;
 }
 
 istream &operator>>(istream &is, Company &company) {

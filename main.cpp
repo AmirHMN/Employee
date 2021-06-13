@@ -20,13 +20,19 @@ int main() {
                                12);
     employee[6] = new Employee("Bahram Sedighi", "98*97320", *(new Address("Iran", "Shiraz", "Fattah")), 4, 3000, 10,
                                2);
-    employee[7] = new Employee("Reza Shiri", "99*rt11320", *(new Address("Iran", "Shiraz", "Fattah")), 3, 6000, 12,
+    employee[7] = new Employee("Reza shiri", "99*rt11320", *(new Address("Iran", "Shiraz", "Fattah")), 3, 6000, 12,
                                11);
     employee[8] = new Employee("Amirhosein Momen", "94*a01203", *(new Address("Iran", "Shiraz", "Fattah")), 8, 15000,
                                25, 19);
     employee[9] = new Employee("Mohammad Rad", "87*ox19280", *(new Address("Iran", "Shiraz", "Fattah")), 2, 4000, 30,
                                25);
     Company company(3000000, boss, employee);
+    cout << "Company before change boss:" << endl << endl;
     cout << company << endl;
+    company.changeBoss();
+    cout << " --------------------------------------------- " << endl;
+    cout << "Company after change boss:" << endl << endl;
+    cout << company << endl;
+
     return 0;
 }
